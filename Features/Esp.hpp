@@ -45,7 +45,7 @@ private:
         float width = height * 0.1;
 
         Vector2d enemyPosition = Vector2d(originScreenPosition.x - width / 2, originScreenPosition.y);
-        Vector2d tracersPosition = Vector2d(1920 / 2, 1080);
+        Vector2d tracersPosition = Vector2d(1600 / 2, 900);
 
         Color tracersColor = visible ? settings.tracersColorVisible() : settings.tracersColor();
         Renderer::drawLine(tracersPosition, enemyPosition, tracersColor, settings.tracersThickness());
@@ -53,7 +53,7 @@ private:
 
     void renderFOV(const AimbotSettings& aimbot, const EspSettings& settings) const {
         float fieldOfView = aimbot.getFieldOfView();
-        Vector2d centerScreenPosition = Vector2d(1920 / 2, 1080 / 2);
+        Vector2d centerScreenPosition = Vector2d(1600 / 2, 900 / 2);
         Renderer::drawFovCircle(centerScreenPosition, fieldOfView * 8, 360.0f, settings.fovColor(), 1.0f);
     }
 
