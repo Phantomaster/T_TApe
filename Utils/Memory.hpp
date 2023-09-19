@@ -23,7 +23,7 @@ private:
 
     pid_t getPID() {
         char buf[512];
-        FILE *cmd_pipe = popen("pidof -s R5Apex.exe", "r");
+        FILE *cmd_pipe = popen("pidof -s r5apex.exe", "r");
         fgets(buf, 512, cmd_pipe);
         pid_t pid = strtoul(buf, NULL, 10);
         pclose(cmd_pipe);
